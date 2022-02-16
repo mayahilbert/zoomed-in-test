@@ -7,10 +7,10 @@
   }
 
   .imageContainer {
-    width: 96%;
-    height: 96%;
-    max-width: 92vw;
-    max-height: 92vh;
+    width: 100%;
+    height: 100%;
+    max-width: 96vw;
+    max-height: 96vh;
     width: 100%;
     height: 100%;
     position: absolute;
