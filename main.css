@@ -194,7 +194,7 @@
   }
 
   .modal-body {
-    padding: 1rem 3rem;
+    padding: 1rem 3rem 2rem 3rem;
   }
 
   .modal-lg {
@@ -203,6 +203,11 @@
 
   .modal.fade .modal-dialog {
     transform: translate(0, 25%);
+  }
+
+  .modal.show .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   @media only screen and (max-width: 600px) {
