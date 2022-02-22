@@ -197,6 +197,10 @@
     max-width: 100vw;
   }
 
+  .modal.fade .modal-dialog {
+    transform: translate(0, 50%);
+  }
+
   @media only screen and (max-width: 600px) {
     .video-responsive {
       width: 100vw;
