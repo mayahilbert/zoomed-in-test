@@ -202,7 +202,7 @@
   }
 
   .modal.fade .modal-dialog {
-    transform: translate(0, 50%);
+    transform: translate(0, 25%);
   }
 
   @media only screen and (max-width: 600px) {
