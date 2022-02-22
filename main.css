@@ -115,7 +115,7 @@
   }
 
   .imageContainer {
-    width: 90vw;
+    width: auto;
     height: 90vh;
     position: absolute;
     overflow: hidden;
