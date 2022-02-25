@@ -202,6 +202,10 @@
     z-index: 900;
   }
 
+  .modal {
+    cursor: crosshair;
+  }
+
   .modal-backdrop {
     background-color: rgba(0, 0, 0, 0);
   }
@@ -220,6 +224,7 @@
   }
 
   .videoWrapper {
+    cursor: crosshair;
     position: absolute;
     left: 0;
     right: 0;
@@ -232,6 +237,7 @@
   }
 
   .videoWrapper iframe {
+    cursor: crosshair;
     position: absolute;
     top: 0;
     left: 0;
@@ -268,6 +274,10 @@
     .thumb-wrapper {
       margin: 0;
     }
+
+    .videoWrapper iframe {
+      padding: 1vw;
+    }
   }
 
   .c-image {
@@ -280,13 +290,12 @@
 
   .p1-image {
     background-position: center;
-    width: 300px;
-    height: 400px;
-    background-size: 150vw;
+    width: 30vw;
+    height: 40vh;
+    background-size: 2000px;
     background-repeat: no-repeat;
-    pointer-events: none;
     transition: 0.3s ease-out;
-    ;
+    cursor: crosshair;
   }
 
   .content-container, .part {
@@ -304,8 +313,8 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 15vw 20vw;
-    margin: 0 5vw;
+    padding: 15vw 15vw;
+    margin: 0 20px;
   }
 
   .part {
