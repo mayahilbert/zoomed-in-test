@@ -1,4 +1,7 @@
 "use strict";
+
+window.onload = function() {};
+
 const displayImage = new Image();
 
 function testfnc() {
