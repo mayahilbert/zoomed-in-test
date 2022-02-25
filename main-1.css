@@ -32,13 +32,12 @@
   }
 
   /* Underline styles */
-  .back-button a {
+  /* .back-button a {
     position: relative;
     padding: 0.1em 0;
-  }
-
+  } */
   /* Fade in */
-  .back-button a::after {
+  /* .back-button a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -61,8 +60,7 @@
   .back-button a:hover::after,
   .back-button a:focus::after {
     transform: translate3d(0, 0, 0);
-  }
-
+  } */
   .overlay {
     display: none;
     z-index: 2;
