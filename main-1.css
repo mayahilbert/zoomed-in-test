@@ -294,6 +294,7 @@
     height: 40vh;
     background-size: 2000px;
     background-repeat: no-repeat;
+    background-position: center;
     transition: 0.3s ease-out;
     cursor: crosshair;
   }
