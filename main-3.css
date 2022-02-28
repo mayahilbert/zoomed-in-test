@@ -8,6 +8,10 @@
     overflow: hidden;
   }
 
+  .mobile {
+    display: none;
+  }
+
   h1, h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
@@ -399,10 +403,12 @@
 
     .vid {
       width: 100vw;
+      flex-direction: column;
     }
 
     .videoWrapper {
       padding-bottom: 46.25%;
+      width: 100vw;
     }
   }
 
@@ -453,6 +459,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 4em;
+  }
+
+  .vid-arrow {
+    cursor: pointer;
+    content: "\2192";
+    opacity: 0.6;
+    font-size: 1.5em;
+    padding: 1em 4em;
+  }
+
+  .vid-arrow:hover {
+    opacity: 1;
   }
 
   .part {
@@ -553,4 +572,17 @@
   [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
     right: auto;
     bottom: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    /* .desktop {
+      display: none;
+    } */
+    /* .mobile {
+      display: inline-block;
+    } */
+    .p1-image-m {
+      max-width: 30vw;
+    }
   }
