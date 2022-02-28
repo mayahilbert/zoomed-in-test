@@ -9,8 +9,155 @@
 </head>
 
 <body id="body">
+  <div class="back-button"><a href="index.html">&#8592; Back</a></div>
+
+  <div data-scroll-container class="smoothScroll">
+
+    <div class="content-container">
+
+      <section class="part" data-scroll-section>
+        <article class="content p2">
+
+          <div class="image p2-1" id="1">
+            <div class="p2-image lazy"></div>
+          </div>
+
+          <div class="image p2-2" id="2">
+            <div class="p2-image lazy"></div>
+          </div>
+
+          <div class="image p2-3" id="3">
+            <div class="diptych">
+              <div class="p2-image lazy"></div>
+              <div class="p2-image lazy"></div>
+            </div>
+          </div>
+
+          <div class="image p2-4" id="4">
+            <div class="p2-image lazy"></div>
+          </div>
+
+          <div class="image p2-5" id="5">
+            <div class="p2-image lazy"></div>
+          </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
 
 
+  <script>
+    let locoScrollDefaults = {
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+      direction: "horizontal",
+      gestureDirection: "both",
+      reloadOnContextChange: "true",
+      // multiplier: 0.9,
+      smartphone: {
+        smooth: true,
+        direction: "horizontal",
+        gestureDirection: "both",
+      },
+      tablet: {
+        smooth: true,
+        direction: "horizontal",
+        gestureDirection: "both",
+      }
+    };
+    let locoScroll = new LocomotiveScroll(locoScrollDefaults);
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var lazyloadImages;
+
+      if ("IntersectionObserver" in window) {
+        lazyloadImages = document.querySelectorAll(".lazy");
+        var imageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var image = entry.target;
+              image.classList.remove("lazy");
+              loadImages();
+              console.log("lazy load");
+              imageObserver.unobserve(image);
+            }
+          });
+        });
+
+        lazyloadImages.forEach(function(image) {
+          imageObserver.observe(image);
+        });
+      } else {
+        var lazyloadThrottleTimeout;
+        lazyloadImages = document.querySelectorAll(".lazy");
+
+        function lazyload() {
+          if (lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }
+
+          lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function(img) {
+              if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                loadImages();
+                console.log("lazy load");
+              }
+            });
+            if (lazyloadImages.length == 0) {
+              document.removeEventListener("scroll", lazyload);
+              window.removeEventListener("resize", lazyload);
+              window.removeEventListener("orientationChange", lazyload);
+            }
+          }, 20);
+        }
+
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+      }
+    })
+    let images = [...document.querySelectorAll('.p2-image')];
+    images.forEach((image, index) => {
+
+      image.setAttribute("data-scroll", "");
+    });
+
+    function loadImages() {
+      images.forEach((image, index) => {
+        var currentImage = `./images/p2/${index+1}.jpg`
+        image.style.backgroundImage = `url(./images/p2/${index+1}.jpg)`
+
+      })
+    }
+
+    document.getElementById("1").addEventListener("click", function() {
+      setTimeout(function() {
+        locoScroll.scrollTo(document.getElementById("2"));
+      }, 350);
+    });
+    document.getElementById("2").addEventListener("click", function() {
+      setTimeout(function() {
+        locoScroll.scrollTo(document.getElementById("3"));
+      }, 350);
+    });
+    document.getElementById("3").addEventListener("click", function() {
+      setTimeout(function() {
+        locoScroll.scrollTo(document.getElementById("4"));
+      }, 350);
+    });
+    document.getElementById("4").addEventListener("click", function() {
+      setTimeout(function() {
+        locoScroll.scrollTo(document.getElementById("5"));
+      }, 350);
+    });
+    document.getElementById("5").addEventListener("click", function() {
+      window.location.href = "index.html";
+
+    });
+  </script>
 </body>
 
 </html>

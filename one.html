@@ -20,12 +20,15 @@
       <p>Please enable Javascript to experience this page.</p>
     </noscript>
     <p class="loading">Loading...</p>
-    <p><strong>Hover</strong> to pan the frame.</p>
-    <p><strong>Click</strong> to enlarge. </p>
-    <p><strong>Scroll</strong> to continue.</p>
+    <p><strong>Hover</strong> to pan <em>Body-Image</em> frame.</p>
+    <p><strong>Click</strong> to reveal full <em>Body-Image</em>. </p>
+    <p><strong>Scroll</strong> to continue. &#8594;
+    </p>
+
   </div>
   </div>
   <div class="back-button"><a href="index.html">&#8592; Back</a></div>
+
   <div class="desktop">
     <div data-scroll-container class="smoothScroll">
 
@@ -317,11 +320,11 @@
         gestureDirection: "both",
       }
     };
+    let locoScroll = new LocomotiveScroll(locoScrollDefaults);
 
     setTimeout(function() {
       $("#loader").addClass("loaded");
     }, 2000);
-    let locoScroll = new LocomotiveScroll(locoScrollDefaults);
     window.addEventListener('load', (event) => {
       $('html').addClass("is-loaded");
       $('#imageModal').on('hidden.bs.modal', function(e) {
