@@ -131,6 +131,7 @@
     color: rgba(0, 0, 0, 0.6);
     letter-spacing: 0.07em;
     transition: 1s;
+    text-decoration: none;
   }
 
   a:hover {
