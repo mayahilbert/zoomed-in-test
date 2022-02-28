@@ -9,6 +9,15 @@
 </head>
 
 <body id="body">
+  <div id="loader">
+    <noscript>
+      <p>Please enable Javascript to experience this page.</p>
+    </noscript>
+    <p class="loading">Loading...</p>
+    <p><strong>Scroll</strong> to continue. &#8594;
+    </p>
+
+  </div>
   <div class="back-button"><a href="index.html">&#8592; Back</a></div>
 
   <div data-scroll-container class="smoothScroll">
@@ -47,6 +56,9 @@
 
 
   <script>
+    setTimeout(function() {
+      document.getElementById("loader").classList.add("loaded");
+    }, 1000);
     let locoScrollDefaults = {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
