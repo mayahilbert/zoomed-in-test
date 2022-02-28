@@ -223,9 +223,15 @@
     $('#imageModal').on('hidden.bs.modal', function(e) {
       var scrollToId = $('#imageModal').attr('scroll-to');
       console.log("Scroll ID:" + scrollToId);
-      document.getElementById(scrollToId).scrollIntoView({
-        behavior: 'smooth'
-      });
+      if (document.getElementById(scrollToId) != null)
+        setTimeout(function() {
+
+
+          document.getElementById(scrollToId).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }, 350);
+
       if (scrollToId == 20) {
         window.location.href = "index.html";
       }
