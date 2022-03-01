@@ -271,10 +271,12 @@
     letter-spacing: 0.07em;
     transition: 1s;
     text-decoration: revert;
+    text-decoration-thickness: .06em;
   }
 
   a:hover {
     color: rgba(0, 0, 0, 1);
+    text-decoration-thickness: .06em;
     /* text-decoration: none; */
   }
 
