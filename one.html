@@ -19,15 +19,18 @@
     <noscript>
       <p>Please enable Javascript to experience this page.</p>
     </noscript>
-    <p class="loading">Loading...</p>
+    <!-- <p class="loading">Loading...</p> -->
+    <p class="door-caption">Part I</p>
     <p><strong>Hover</strong> to pan <em>Body-Image</em> frame.</p>
-    <p><strong>Click</strong> to reveal full <em>Body-Image</em>. </p>
-    <p><strong>Scroll</strong> to continue. &#8594;
-    </p>
+    <p><strong>Click</strong> to reveal full <em>Body-Image</em>.</p>
+    <p><strong>Scroll</strong> to continue. &#8594;</p>
+
+    <p class="enter-button black-button" id="enter-button">Enter</p>
+    <p style="position:absolute; bottom: 5vw;max-width:80vw;margin:auto;text-align:center;">Click <img src="images/move-59.svg" style="width:40px; height:40px;" /> bring up these instructions at any time.</p>
 
   </div>
-  </div>
-  <div class="back-button"><a href="index.html">&#8592; Back</a></div>
+  <div class="back-button"><a href="index.html">&#8592; Return</a></div>
+  <div id="nav-instructions"><img src="images/move-59.svg" /></div>
 
   <div class="desktop">
     <div data-scroll-container class="smoothScroll">
@@ -57,7 +60,8 @@
             <div class="vid" id="3">
               <div class="p1-image lazy hidden-image"></div>
               <div class="videoWrapper">
-                <iframe src="https://player.vimeo.com/video/678853710?h=7824a21825&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe>
+
+                <iframe src="https://player.vimeo.com/video/683053861?h=a945d148da&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe>
                 <script src="https://player.vimeo.com/api/player.js"></script>
               </div>
               <a class="vid-3 vid-arrow">&#8594;</a>
@@ -72,9 +76,13 @@
                 <div class="p1-image lazy"></div>
               </a>
             </div>
-            <div class="image" id="6"> <a class="pop">
-                <div class="p1-image lazy"></div>
-              </a>
+            <div class="vid" id="6">
+              <div class="p1-image lazy hidden-image"></div>
+              <div class="videoWrapper">
+                <iframe src="https://player.vimeo.com/video/683054021?h=acc2c2d3e9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+              </div>
+              <a class="vid-6 vid-arrow">&#8594;</a>
             </div>
             <div class="image" id="7"> <a class="pop">
                 <div class="p1-image lazy"></div>
@@ -96,10 +104,6 @@
                 <div class="p1-image lazy"></div>
               </a>
             </div>
-            <!-- <div class="image"> <a data-toggle="modal" data-target="#video3Modal">
-              <div class="p1-image lazy"></div>
-            </a>
-          </div> -->
 
             <div class="vid" id="12">
               <div class="p1-image lazy hidden-image"></div>
@@ -107,7 +111,6 @@
               <div class="videoWrapper">
                 <iframe src="https://player.vimeo.com/video/678854661?h=29b8ed9d68&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe></div>
               <a class="vid-12 vid-arrow">&#8594;</a>
-
             </div>
 
             <div class="image" id="13"> <a class="pop">
@@ -156,6 +159,28 @@
         </button>
         <div class="imageWrapper modal-body" data-scroll-to>
           <a class="imageContainerLink"><img src="" class="imageContainer"></img></a>
+        </div>
+        <div class="img-arrow-container">
+          <div class="img-arrow">&#8594;</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Instructions Modal -->
+
+  <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true" style="width: 100vw;">
+    <div class="modal-dialog modal-dialog-centered" role="document" data-dismiss="modal" aria-label="Close">
+
+      <div class="modal-content"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&#10005;
+          </span>
+        </button>
+        <div class="modal-body">
+          <p><strong>Hover</strong> to pan <em>Body-Image</em> frame.</p>
+          <p><strong>Click</strong> to reveal full <em>Body-Image</em>. </p>
+          <p><strong>Scroll</strong> to continue. &#8594;
+          </p>
         </div>
       </div>
     </div>
@@ -323,8 +348,13 @@
     let locoScroll = new LocomotiveScroll(locoScrollDefaults);
 
     setTimeout(function() {
-      $("#loader").addClass("loaded");
+      $("#enter-button").addClass("enter-ready");
     }, 2000);
+    $('#loader').on('click', function(e) {
+      $("#loader").addClass("loaded");
+
+    });
+
     window.addEventListener('load', (event) => {
       $('html').addClass("is-loaded");
       $('#imageModal').on('hidden.bs.modal', function(e) {
@@ -347,6 +377,12 @@
       $('.vid-3').on('click', function() {
         setTimeout(function() {
           locoScroll.scrollTo(document.getElementById("4"));
+        }, 350);
+
+      });
+      $('.vid-6').on('click', function() {
+        setTimeout(function() {
+          locoScroll.scrollTo(document.getElementById("7"));
         }, 350);
 
       });
@@ -420,6 +456,10 @@
       $(this).find("iframe").css("pointer-events", "none");
     });
 
+    $('#nav-instructions').on('click', function() {
+      $('#instructionsModal').modal('show');
+    });
+
     $(function() {
       $('.pop').on('click', function() {
         const p1image = this.children[0];
@@ -475,7 +515,8 @@
         let _mouseX = e.clientX;
         let _mouseY = e.clientY;
         let x = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-        imageC.children[0].children[0].style.backgroundPosition = x;
+        if (imageC.children[0].children[0] !== undefined)
+          imageC.children[0].children[0].style.backgroundPosition = x;
       }
 
     })
