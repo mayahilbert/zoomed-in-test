@@ -31,14 +31,6 @@
     right: 2vw;
   }
 
-  @media only screen and (max-width: 900px) {
-    .curatorial-pdf-button {
-      position: relative;
-      bottom: auto;
-      right: auto;
-    }
-  }
-
   hr {
     height: 2px;
   }
@@ -603,31 +595,6 @@
     transition: opacity 0.4s ease-in-out;
   }
 
-  @media only screen and (max-width: 600px) {
-    .video-responsive {
-      width: 100vw;
-      margin-top: 5em;
-    }
-
-    .thumb-wrapper {
-      margin: 0;
-    }
-
-    .videoWrapper iframe {
-      padding: 1vw;
-    }
-
-    .vid {
-      width: 100vw;
-      flex-direction: column;
-    }
-
-    .videoWrapper {
-      padding-bottom: 46.25%;
-      width: 100vw;
-    }
-  }
-
   .c-image {
     width: 100vw;
     height: 100vh;
@@ -663,31 +630,6 @@
 
   .p2-3 {
     margin-right: 10vw;
-  }
-
-  @media only screen and (max-width: 800px) {
-    .p2-5, .p2-4 {
-      margin-left: 15vw;
-    }
-  }
-
-  @media only screen and (max-width: 800px) {
-    .diptych {
-      margin: 0;
-    }
-
-    .p2-1, .p2-2, .p2-3, .p2-4, .p2-5 {
-      margin-right: 15vw;
-    }
-
-    .p2-3 {
-      margin-left: 15vw;
-    }
-  }
-
-  .p2 .image {
-    width: auto;
-    min-width: 100vw;
   }
 
   .p2-image {
@@ -776,6 +718,58 @@
 
   .part .content {
     display: flex;
+  }
+
+  @media screen and (max-width: 900px) {
+    .curatorial-pdf-button {
+      position: relative;
+      bottom: auto;
+      right: auto;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .video-responsive {
+      width: 100vw;
+      margin-top: 5em;
+    }
+
+    .thumb-wrapper {
+      margin: 0;
+    }
+
+    .videoWrapper iframe {
+      padding: 1vw;
+    }
+
+    .vid {
+      width: 100vw;
+      flex-direction: column;
+    }
+
+    .videoWrapper {
+      padding-bottom: 46.25%;
+      width: 100vw;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .diptych {
+      margin: 0;
+    }
+
+    .p2-1, .p2-2, .p2-3, .p2-4, .p2-5 {
+      margin-right: 15vw;
+    }
+
+    .p2-3 {
+      margin-left: 15vw;
+    }
+  }
+
+  .p2 .image {
+    width: auto;
+    min-width: 100vw;
   }
 
   /* LocomotiveScroll */
