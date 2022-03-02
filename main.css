@@ -733,6 +733,10 @@
       font-size: 0.9em;
     }
 
+    .back-button {
+      position: sticky;
+    }
+
     .video-responsive {
       width: 100vw;
       margin-top: 5em;
@@ -778,6 +782,7 @@
   .p2 .image {
     width: auto;
     min-width: 100vw;
+    max-height: 98vh;
   }
 
   /* LocomotiveScroll */
