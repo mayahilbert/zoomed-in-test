@@ -721,6 +721,14 @@
     display: flex;
   }
 
+  .instructions-bottom-line {
+    position: absolute;
+    bottom: 10vh;
+    max-width: 80vw;
+    margin: auto;
+    text-align: center;
+  }
+
   @media screen and (max-width: 900px) {
     .curatorial-pdf-button {
       position: relative;
