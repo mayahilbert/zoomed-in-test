@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html class="" lang="en" dir="ltr">
+<html class="" lang="en" dir="ltr" class="no-overflow">
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Part I - Pinar Yolaçan: Body-Image</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="main-3.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="no-overflow">
 
   <div id="loader">
     <noscript>
       <p>Please enable Javascript to experience this page.</p>
     </noscript>
-    <!-- <p class="loading">Loading...</p> -->
     <p class="door-caption">Part I</p>
     <p><strong>Hover</strong> to pan <em>Body-Image</em> frame.</p>
     <p><strong>Click</strong> to reveal full <em>Body-Image</em>.</p>
     <p><strong>Scroll</strong> to continue. &#8594;</p>
 
+    <p class="loading" id="loading-text">Loading...</p>
     <p class="enter-button black-button" id="enter-button">Enter</p>
     <p style="position:absolute; bottom: 5vw;max-width:80vw;margin:auto;text-align:center;">Click <img src="images/move-59.svg" style="width:40px; height:40px;" /> bring up these instructions at any time.</p>
 
@@ -57,12 +56,11 @@
               <div class="p1-image lazy"></div>
             </a>
           </div> -->
-            <div class="vid" id="3">
+            <div class="vid" id="3" data-scroll data-scroll-call="playVideo" data-scroll-repeat="true">
               <div class="p1-image lazy hidden-image"></div>
               <div class="videoWrapper">
 
-                <iframe src="https://player.vimeo.com/video/683053861?h=a945d148da&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe>
-                <script src="https://player.vimeo.com/api/player.js"></script>
+                <iframe id="video3" src="https://player.vimeo.com/video/683053861?h=a945d148da&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe>
               </div>
               <a class="vid-3 vid-arrow">&#8594;</a>
             </div>
@@ -323,6 +321,10 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <!-- <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,UR"></script>
+  <script src="https://unpkg.com/plyr@3"></script> -->
+
 
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
 
@@ -348,6 +350,7 @@
     let locoScroll = new LocomotiveScroll(locoScrollDefaults);
 
     setTimeout(function() {
+      $("#loading-text").addClass("loading-ready");
       $("#enter-button").addClass("enter-ready");
     }, 2000);
     $('#loader').on('click', function(e) {
@@ -364,9 +367,6 @@
         if (document.getElementById(scrollToId) !== null) {
           setTimeout(function() {
             locoScroll.scrollTo(document.getElementById(scrollToId));
-            // document.getElementById(scrollToId).scrollIntoView({
-            //   behavior: 'smooth'
-            // });
           }, 350);
         }
         if (scrollToId == 19) {
@@ -389,7 +389,6 @@
       $('.vid-12').on('click', function() {
         setTimeout(function() {
           locoScroll.scrollTo(document.getElementById("13"));
-
         }, 350);
       });
     });
@@ -505,8 +504,6 @@
 
 
     imagesContainers.forEach((imageC, index) => {
-      // imageC.style.transform = `translateY(${Math.random() * (10 + 200) - 200}px)`;
-
       imageC.addEventListener("pointermove", parallax);
 
       function parallax(e) {
@@ -521,6 +518,20 @@
 
     })
 
+    // setTimeout(() => {
+    //   locoScroll.on('call', (func, dir, obj) => {
+    //     if (func === 'playVideo') {
+    //       console.log("here");
+    //       var player = new Vimeo.Player('video3');
+    //       if (dir === 'enter') {
+    //         player.play();
+    //       } else if (dir === "exit") {
+    //         player.pause();
+    //       }
+    //     }
+    //
+    //   });
+    // }, 800);
 
 
     // Pause video on exiting modal
