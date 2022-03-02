@@ -686,7 +686,7 @@
   .vid-arrow {
     cursor: pointer;
     content: "\2192";
-    opacity: 0.6;
+    opacity: 0.7;
     font-size: 1.5em;
     padding-bottom: 2em;
   }
@@ -704,7 +704,7 @@
   .img-arrow {
     cursor: pointer;
     content: "\2192";
-    opacity: 0.6;
+    opacity: 0.7;
     font-size: 1.5em;
     padding-bottom: 2em;
   }
@@ -752,6 +752,10 @@
   @media screen and (max-width: 600px) {
     html, body {
       font-size: 18px;
+    }
+
+    .door-container {
+      height: 43vh;
     }
 
     .back-button {
@@ -846,9 +850,9 @@
 
   [data-scroll-direction="horizontal"] .c-scrollbar {
     width: 100%;
-    height: 10px;
+    height: 13px;
     top: auto;
-    bottom: 0;
+    bottom: 4px;
     transform: scaleY(1);
   }
 
@@ -860,8 +864,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: black;
-    opacity: 0.5;
+    background-color: white;
+    border: 1px solid black;
+    opacity: 0.7;
     width: 7px;
     border-radius: 10px;
     margin: 2px;
@@ -870,6 +875,7 @@
   }
 
   .has-scroll-dragging .c-scrollbar_thumb {
+    opacity: 1;
     cursor: -webkit-grabbing;
     cursor: grabbing;
   }
