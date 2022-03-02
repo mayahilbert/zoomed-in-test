@@ -729,6 +729,10 @@
   }
 
   @media screen and (max-width: 600px) {
+    .small-link {
+      font-size: 0.9em;
+    }
+
     .video-responsive {
       width: 100vw;
       margin-top: 5em;
@@ -750,6 +754,10 @@
     .videoWrapper {
       padding-bottom: 46.25%;
       width: 100vw;
+    }
+
+    .p1-image-m {
+      max-width: 30vw;
     }
   }
 
@@ -858,17 +866,4 @@
   [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
     right: auto;
     bottom: 0;
-  }
-
-  @media only screen and (max-width: 600px) {
-
-    /* .desktop {
-      display: none;
-    } */
-    /* .mobile {
-      display: inline-block;
-    } */
-    .p1-image-m {
-      max-width: 30vw;
-    }
   }
