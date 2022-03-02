@@ -751,7 +751,7 @@
 
   @media screen and (max-width: 600px) {
     html, body {
-      font-size: 21px;
+      font-size: 18px;
     }
 
     .back-button {
