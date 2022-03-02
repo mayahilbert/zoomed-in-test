@@ -750,7 +750,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    html {
+    html, body {
       font-size: 21px;
     }
 
