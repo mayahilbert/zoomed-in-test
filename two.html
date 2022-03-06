@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Part II - Pinar Yolaçan: Body-Image</title>
+  <title>The Bricoleur - Pinar Yolaçan: Body-Image</title>
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
@@ -41,19 +41,11 @@
     <noscript>
       <p>Please enable Javascript to experience this site.</p>
     </noscript>
-    <h1>Body-Image</h1>
-    <h3 style="margin-top: -1.4em; margin-left:0.3em;">Pinar Yolaçan</h3>
-    <p class="door-caption">Part II</p>
-    <!-- <p><strong>Scroll</strong> to continue. &#8594;</p> -->
     <p class="loading" id="loading-text">Loading...</p>
-
-    <p class="enter-button black-button" id="enter-button">Enter</p>
-    <!-- <p class="instructions-bottom-line">Click <img src="images/move-59.svg" style="width:40px; height:40px;" /> bring up these instructions at any time.</p> -->
-
   </div>
   <div class="nav-parts">
-    <div><a href="index.html">&#8592; Part I</a></div>
-    <div><a href="three.html">Part III &#8594;</a></div>
+    <div><a href="index.html">&#8592; <em>Body-Image</em></a></div>
+    <div><a href="three.html"><em>Tuire (First Contact)</em> &#8594;</a></div>
 
   </div>
   <!-- <div id="nav-instructions"><img src="images/move-59.svg" /></div> -->
@@ -194,7 +186,7 @@
           <div class="image p2-5" id="16">
             <div class="p2-image lazy"></div>
             <div class="img-arrow-container">
-              <a href="three.html">Part III &#8594;</a> </div>
+              <a href="three.html"><em>Tuire (First Contact)</em> &#8594;</a> </div>
           </div>
 
     </div>
@@ -226,13 +218,9 @@
 
   <script>
     setTimeout(function() {
-      $("#loading-text").addClass("loading-ready");
-      $("#enter-button").addClass("enter-ready");
-    }, 2000);
-    $('#loader').on('click', function(e) {
       $("#loader").addClass("loaded");
+    }, 1500);
 
-    });
     let locoScrollDefaults = {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
