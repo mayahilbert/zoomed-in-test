@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="no-overflow">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<link rel="stylesheet" href="main.css">
 
 <head>
   <meta charset="utf-8">
-  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Part II - Pinar Yolaçan: Body-Image</title>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="main.css">
   <style>
     .image {
       margin-right: 15vw;
@@ -38,20 +39,24 @@
 <body class="no-overflow">
   <div id="loader">
     <noscript>
-      <p>Please enable Javascript to experience this page.</p>
+      <p>Please enable Javascript to experience this site.</p>
     </noscript>
-    <!-- <p class="loading">Loading...</p> -->
+    <h1>Body-Image</h1>
+    <h3 style="margin-top: -1.4em; margin-left:0.3em;">Pinar Yolaçan</h3>
     <p class="door-caption">Part II</p>
-    <p><strong>Scroll</strong> to continue. &#8594;</p>
+    <!-- <p><strong>Scroll</strong> to continue. &#8594;</p> -->
     <p class="loading" id="loading-text">Loading...</p>
 
     <p class="enter-button black-button" id="enter-button">Enter</p>
-    <p class="instructions-bottom-line">Click <img src="images/move-59.svg" style="width:40px; height:40px;" /> bring up these instructions at any time.</p>
+    <!-- <p class="instructions-bottom-line">Click <img src="images/move-59.svg" style="width:40px; height:40px;" /> bring up these instructions at any time.</p> -->
 
   </div>
+  <div class="nav-parts">
+    <div><a href="index.html">&#8592; Part I</a></div>
+    <div><a href="three.html">Part III &#8594;</a></div>
 
-  <div class="back-button"><a href="index.html">&#8592; Return</a></div>
-  <div id="nav-instructions"><img src="images/move-59.svg" /></div>
+  </div>
+  <!-- <div id="nav-instructions"><img src="images/move-59.svg" /></div> -->
 
   <div data-scroll-container class="smoothScroll">
 
@@ -185,13 +190,13 @@
           <div class="image p2-5" id="16">
             <div class="p2-image lazy"></div>
             <div class="img-arrow-container">
-              <div class="img-arrow">&#8594; </div>
-            </div>
+              <a href="three.html">Part III &#8594;</a> </div>
           </div>
+
     </div>
   </div>
   <!-- Instructions Modal -->
-
+  <!--
   <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true" style="width: 100vw;">
     <div class="modal-dialog modal-dialog-centered" role="document" data-dismiss="modal" aria-label="Close">
 
@@ -205,13 +210,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
 
 
@@ -319,7 +324,7 @@
         }, 350);
       }
       if (nextImage == 17) {
-        window.location.href = "index.html";
+        window.location.href = "three.html";
       }
     });
     // });

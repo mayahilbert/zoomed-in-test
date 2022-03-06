@@ -3,52 +3,382 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script> -->
 <link rel="stylesheet" href="main.css">
 
 <head>
   <meta charset="utf-8">
   <meta name=viewport content="width=device-width, initial-scale=1">
-  <title>Home - Pinar Yolaçan: Body-Image</title>
+  <title>Part I - Pinar Yolaçan: Body-Image</title>
 </head>
 
 <body>
-  <div class="page-wrapper-full-height">
-    <div class="header">
-      <div class="header-title">
-        <h1>Body-Image</h1>
-        <h3 style="margin-top: -1.4em; margin-left:0.3em;">Pinar Yolaçan</h3>
-      </div>
+  <div id="loader">
+    <noscript>
+      <p>Please enable Javascript to experience this site.</p>
+    </noscript>
+    <h1>Body-Image</h1>
+    <h3 style="margin-top: -1.4em; margin-left:0.3em;">Pinar Yolaçan</h3>
+    <p class="door-caption">Part I</p>
+    <!-- <p><strong>Scroll</strong> to continue. &#8594;</p> -->
+    <p class="loading" id="loading-text">Loading...</p>
 
-    </div>
+    <p class="enter-button black-button" id="enter-button">Enter</p>
 
-    <div class="doors-wrapper">
-      <a href="one.html">
-        <div class="door-container door-one">
-        </div>
-        <p class="door-caption">Part I</p>
-
-      </a>
-      <a href="two.html">
-        <div class="door-container door-two">
-        </div>
-        <p class="door-caption">Part II</p>
-
-      </a>
-      <a href="three.html">
-        <div class="door-container door-three">
-        </div>
-        <p class="door-caption">Part III</p>
-
-      </a>
-    </div>
-    <div class="curatorial-link-wrapper">
-      <a class="small-link black-button" href="curatorial-statement.html">Curatorial Statement</a>
-      <a class="small-link" href="https://newmediartspace.info" target="_blank">New Media Artspace</a>
-    </div>
-    <!-- <div class="nma-link"><a class="small-link" href="https://newmediartspace.info" target="_blank">New Media Artspace</a></div> -->
-
+    <!-- <p class="instructions-bottom-line">Click <img src="images/move-59.svg" style="width:40px; height:40px;" /> bring up these instructions at any time.</p> -->
   </div>
+
+
+
+  <!-- <div class="back-button"><a href="index.html">&#8592; Return</a></div>
+    <div id="nav-instructions"><img src="images/move-59.svg" /></div> -->
+
+  <div data-scroll-container class="smoothScroll">
+
+    <div class="content-container-vertical">
+
+      <section class="part-vertical" data-scroll-section>
+        <article class="content-vertical p1">
+          <div style="margin-top:1.5vh;margin-left: 1vw;
+          " class="header">
+            <div class="header-title">
+              <h1 style="margin-top:0;">Body-Image</h1>
+              <h3 style="margin-top: -2.2em; margin-left:0.3em;">Pinar Yolaçan</h3>
+            </div>
+            <div class="parts-links">
+              <a href="two.html">Part II &#8594;</a>
+              <a href="three.html">Part III &#8594;</a></div>
+          </div>
+          <div class="curatorial-link-wrapper-mobile">
+            <a class="small-link black-button" href="curatorial-statement.html">Curatorial Statement</a>
+            <a class="small-link" href="https://newmediartspace.info" target="_blank" style="padding-left:5px;">New Media Artspace</a>
+          </div>
+          <div class="image" id="1" style="margin-top:-2vh;">
+            <div class=" v-image lazy" style="height:65vh;"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Like a Stone</em> series<br>
+                Digital C- Print 30x40” <br>
+                2011<br>
+                Courtesy of the artist and Wetterling Gallery
+              </p>
+            </div>
+          </div>
+
+          <div class="image" id="2">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Like a Stone</em> series<br>
+                Digital C- Print 40x50” <br>
+                2011<br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+
+          <div class="vid-v" id="3">
+            <div class="videoWrapper-vertical">
+              <iframe src="https://player.vimeo.com/video/683053861?h=a945d148da&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe></div>
+
+            <div class="vid-v-arrow-container"></div>
+            <div class="v-caption">
+              <p><em>Mulher Cobra (Snake Woman) </em><br>
+                Dimensions Variable <br>
+                2 min 19 secs <br>
+                2013<br>
+                Courtesy of the artist and Wetterling Gallery
+              </p>
+            </div><a class="vid-v-arrow" id="3">&#8595;</a>
+          </div>
+
+          <div class="image" id="4">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Like a Stone</em> series<br>
+                Digital C- Print 40x50” <br>
+                2011<br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+
+          <div class="vid-v" id="5">
+            <div class="videoWrapper-vertical">
+              <iframe src="https://player.vimeo.com/video/683054021?h=acc2c2d3e9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe></div>
+            <div class="vid-v-arrow-container"></div>
+            <div class="v-caption">
+              <p><em>Kathak </em><br>
+                Dimensions Variable <br>
+                1 min 42 secs <br>
+                2017<br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div> <a class="vid-v-arrow" id="5">&#8595;</a>
+          </div>
+
+          <div class="image" id="6">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Corpo Mechanico</em> series <br>
+                Archival Inkjet Print 30x40” <br>
+                2014 <br>
+                Courtesy of the artist and Wetterling Gallery
+              </p>
+            </div>
+          </div>
+          <div class="image" id="7">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Corpo Mechanico</em> series <br>
+                Archival Inkjet Print 28x21” <br>
+                2014 <br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="image" id="8">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Corpo Mechanico</em> series <br>
+                Archival Inkjet Print 30x40” <br>
+                2014 <br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="image" id="9">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Corpo Mechanico</em> series <br>
+                Archival Inkjet Print 28x21” <br>
+                2014 <br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="image" id="10">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Corpo Mechanico</em> series <br>
+                Archival Inkjet Print 24x18” <br>
+                2014 <br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="vid-v" id="11">
+            <div class="videoWrapper-vertical">
+              <iframe src="https://player.vimeo.com/video/678854661?h=29b8ed9d68&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" allowfullscreen></iframe></div>
+            <div class="vid-v-arrow-container"></div>
+            <div class="v-caption">
+              <p><em>Mulher Maravilha (Wonder Woman)</em><br>
+                Dimensions Variable <br>
+                2 min 00 secs <br>
+                2014<br>
+                Courtesy of the artist and Wetterling Gallery
+              </p>
+            </div>
+            <a class="vid-v-arrow" id="11">&#8595;</a>
+          </div>
+          <div class="image" id="12">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Corpo Mechanico</em> series <br>
+                Archival Inkjet Print 28x21” <br>
+                2014 <br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="image" id="13">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Like a Stone</em> series<br>
+                Digital C- Print 40x50” <br>
+                2011<br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="image" id="14">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Like a Stone</em> series<br>
+                Digital C- Print 40x50” <br>
+                2011<br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="image" id="15">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled</em> from <em>Like a Stone</em> series<br>
+                Digital C- Print 40x50” <br>
+                2011<br>
+                Courtesy of the artist and Wetterling Gallery</p>
+            </div>
+          </div>
+          <div class="image" id="16">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled 1-3 (triptych)</em> from <em>Nudes</em> series<br>
+                Archival inkjet print 53x40” <br>
+                2013 <br>
+                Courtesy of the artist and Wetterling Gallery
+              </p>
+            </div>
+          </div>
+          <div class="image" id="17">
+            <div class="v-image lazy"></div>
+            <div class="v-caption">
+              <p><em>Untitled 1-3 (triptych)</em> from <em>Nudes</em> series<br>
+                Archival inkjet print 53x40”<br>
+                2012<br>
+                Courtesy of the artist and Wetterling Gallery
+              </p>
+            </div>
+          </div>
+
+          <div class="next-part image"><a href="two.html">Part II &#8594;</a></div>
+        </article>
+      </section>
+    </div>
+  </div>
+  <div class="curatorial-link-wrapper">
+    <a class="small-link black-button" href="curatorial-statement.html">Curatorial Statement</a>
+    <a class="small-link" href="https://newmediartspace.info" target="_blank">New Media Artspace</a>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
+
+
+  <script>
+    setTimeout(function() {
+      $("#loading-text").addClass("loading-ready");
+      $("#enter-button").addClass("enter-ready");
+    }, 2000);
+    $('#loader').on('click', function(e) {
+      $("#loader").addClass("loaded");
+
+    });
+    let locoScrollDefaults = {
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+      direction: "vertical",
+      gestureDirection: "both",
+      reloadOnContextChange: "true",
+      smartphone: {
+        smooth: true,
+        direction: "vertical",
+        gestureDirection: "both",
+      },
+      tablet: {
+        smooth: true,
+        direction: "vertical",
+        gestureDirection: "both",
+      }
+    };
+    let locoScroll = new LocomotiveScroll(locoScrollDefaults);
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var lazyloadImages;
+
+      if ("IntersectionObserver" in window) {
+        lazyloadImages = document.querySelectorAll(".lazy");
+        var imageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var image = entry.target;
+              image.classList.remove("lazy");
+              loadImages();
+              console.log("lazy load");
+              imageObserver.unobserve(image);
+            }
+          });
+        });
+
+        lazyloadImages.forEach(function(image) {
+          imageObserver.observe(image);
+        });
+      } else {
+        var lazyloadThrottleTimeout;
+        lazyloadImages = document.querySelectorAll(".lazy");
+
+        function lazyload() {
+          if (lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }
+
+          lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function(img) {
+              if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                loadImages();
+                console.log("lazy load");
+              }
+            });
+            if (lazyloadImages.length == 0) {
+              document.removeEventListener("scroll", lazyload);
+              window.removeEventListener("resize", lazyload);
+              window.removeEventListener("orientationChange", lazyload);
+            }
+          }, 20);
+        }
+
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+      }
+    })
+    let images = [...document.querySelectorAll('.v-image')];
+    images.forEach((image, index) => {
+
+      image.setAttribute("data-scroll", "");
+    });
+
+    function loadImages() {
+      images.forEach((image, index) => {
+        var currentImage = `./images/p1-2/${index+1}.jpg`
+        image.style.backgroundImage = `url(./images/p1-2/${index+1}.jpg)`
+
+      })
+    }
+
+
+    $('.image').on('click', function() {
+      console.log(parseInt($(this).attr('id')) + 1);
+      var nextImage = parseInt($(this).attr('id')) + 1;
+      if (document.getElementById(nextImage) !== null) {
+        setTimeout(function() {
+          locoScroll.scrollTo(document.getElementById(nextImage));
+        }, 350);
+      }
+      if (nextImage == 18) {
+        window.location.href = "two.html";
+      }
+    });
+    $('.vid-v-arrow').on('click', function() {
+      console.log(parseInt($(this).attr('id')) + 1);
+      var nextImage = parseInt($(this).attr('id')) + 1;
+      if (document.getElementById(nextImage) !== null) {
+        setTimeout(function() {
+          locoScroll.scrollTo(document.getElementById(nextImage));
+        }, 350);
+      }
+      if (nextImage == 19) {
+        window.location.href = "index.html";
+      }
+    });
+    $(".vid-v").click(function() {
+      $(this).find("iframe").css("pointer-events", "auto");
+    });
+    $(".vid-v").mouseleave(function() {
+      $(this).find("iframe").css("pointer-events", "none");
+    });
+
+    $('#nav-instructions').on('click', function() {
+      $('#instructionsModal').modal('show');
+
+    });
+  </script>
 </body>
 
 </html>
