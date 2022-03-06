@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script> -->
 <link rel="stylesheet" href="main.css">
 
@@ -39,8 +39,7 @@
 
       <section class="part-vertical" data-scroll-section>
         <article class="content-vertical p1">
-          <div style="margin-top:1.5vh;margin-left: 1vw;
-          " class="header">
+          <div style="margin-top:1.5vh;margin-left: 1vw;" class="header">
             <div class="header-title">
               <h1 style="margin-top:0;">Body-Image</h1>
               <h3 style="margin-top: -2.2em; margin-left:0.3em;">Pinar Yolaçan</h3>
@@ -48,10 +47,16 @@
             <div class="parts-links">
               <a href="two.html">Part II &#8594;</a>
               <a href="three.html">Part III &#8594;</a></div>
+
           </div>
           <div class="curatorial-link-wrapper-mobile">
             <a class="small-link black-button" href="curatorial-statement.html">Curatorial Statement</a>
             <a class="small-link" href="https://newmediartspace.info" target="_blank" style="padding-left:5px;">New Media Artspace</a>
+          </div>
+          <div class="scroll-prompt">
+            <p>Scroll</p>
+            <div class="scroll-line">
+            </div>
           </div>
           <div class="image" id="1" style="margin-top:-2vh;">
             <div class=" v-image lazy" style="height:65vh;"></div>
@@ -234,6 +239,7 @@
       </section>
     </div>
   </div>
+
   <div class="curatorial-link-wrapper">
     <a class="small-link black-button" href="curatorial-statement.html">Curatorial Statement</a>
     <a class="small-link" href="https://newmediartspace.info" target="_blank">New Media Artspace</a>
@@ -342,7 +348,11 @@
       })
     }
 
-
+    $('.scroll-prompt').on('click', function() {
+      setTimeout(function() {
+        locoScroll.scrollTo(document.getElementById(1));
+      }, 350);
+    });
     $('.image').on('click', function() {
       console.log(parseInt($(this).attr('id')) + 1);
       var nextImage = parseInt($(this).attr('id')) + 1;

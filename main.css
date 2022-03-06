@@ -73,9 +73,13 @@
     margin-top: -2.4em;
     font-size: 1.5em;
     opacity: 0;
-    transition: opacity 1s;
-    transition-delay: 800ms;
+    transition: opacity 1s, letter-spacing 0.5s;
+    transition-delay: opacity 800ms;
     cursor: pointer;
+  }
+
+  #enter-button:hover {
+    letter-spacing: 0.09em;
   }
 
   #enter-button.enter-ready {
@@ -135,6 +139,52 @@
   h1, h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
+  }
+
+  .scroll-prompt p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+
+  .scroll-prompt {
+    cursor: pointer;
+    position: absolute;
+    top: 30vh;
+    left: 7vw;
+    text-align: center;
+    animation: bounce 10s ease-out infinite;
+  }
+
+  .scroll-line {
+    margin: 0 auto;
+    width: 1px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    animation: slide 6s cubic-bezier(1, 0, 0, 1) infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform-origin: 0% 0%;
+      transform: scale(1, 0);
+    }
+
+    20% {
+      transform-origin: 0% 0%;
+      transform: scale(1, 1);
+    }
+
+    40% {
+      transform-origin: 0% 100%;
+      transform: scale(1, 1);
+    }
+
+    100% {
+      transform-origin: 0% 100%;
+      transform: scale(1, 0);
+    }
   }
 
   h1 {
@@ -343,7 +393,7 @@
   a {
     color: rgba(0, 0, 0, 0.7);
     letter-spacing: 0.07em;
-    transition: color 1s;
+    transition: color 1s, letter-spacing 0.5s;
     text-decoration: revert;
     text-decoration-thickness: .06em;
   }
@@ -351,6 +401,7 @@
   a:hover {
     color: rgba(0, 0, 0, 1);
     text-decoration-thickness: .06em;
+    letter-spacing: 0.08em;
     /* text-decoration: none; */
   }
 
@@ -549,7 +600,7 @@
   }
 
   .modal-lg {
-    max-width: 100vw;
+    max-width: 80vw;
   }
 
   .modal-open[style], .modal-open .modal {
@@ -738,7 +789,7 @@
   }
 
   .p1 .image {
-    margin: 8vh 0;
+    margin: 30vh 0;
     padding: 2vh 0;
   }
 
@@ -769,16 +820,17 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin: 10vh 0;
+    margin: 32vh 0;
     padding: 3vh 0;
   }
 
-  .vid-arrow {
+  .vid-arrow, .img-arrow {
     cursor: pointer;
     content: "\2192";
-    opacity: 0.7;
+    opacity: 0.5;
     font-size: 1.5em;
     padding-bottom: 2em;
+    transition: opacity 1s;
   }
 
   .vid-arrow:hover, .vid-v-arrow:hover, .img-arrow:hover {
@@ -789,14 +841,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .img-arrow {
-    cursor: pointer;
-    content: "\2192";
-    opacity: 0.7;
-    font-size: 1.5em;
-    padding-bottom: 2em;
   }
 
   .part {
@@ -938,6 +982,10 @@
     .vid-v-arrow {
       font-size: 1.5em;
     }
+
+    .scroll-prompt {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -955,6 +1003,7 @@
       justify-content: center;
       flex-direction: column;
       margin-left: 1.5vw;
+      margin-bottom: 2vw;
     }
 
     .door-container {
@@ -1013,5 +1062,9 @@
 
     .parts-links {
       flex-direction: column;
+    }
+
+    .modal-lg {
+      max-width: 100vw;
     }
   }
