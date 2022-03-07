@@ -887,8 +887,7 @@
     justify-content: flex-end;
     align-items: end;
     flex-direction: row;
-    margin: 32vh 0 22vh 0;
-    padding-bottom: 10vh;
+    margin: 38vh 0 15vh 0;
   }
 
   .vid-arrow, .img-arrow {
@@ -1106,6 +1105,7 @@
     .vid-v {
       flex-direction: column;
       justify-content: center;
+      margin: -10vh 0 50vh 0;
     }
 
     .videoWrapper {
