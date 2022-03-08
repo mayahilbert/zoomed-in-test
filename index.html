@@ -389,11 +389,6 @@
 
 
   <script>
-    // setTimeout(function() {
-    //   $("#loader").addClass("loaded");
-    // }, 2500);
-
-
     let locoScrollDefaults = {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
@@ -477,8 +472,6 @@
         var currentImage = `./images/p1-2/${index+1}.jpg`
         image.style.backgroundImage = `url(./images/p1-2/${index+1}.jpg)`
       })
-      $("#loader").addClass("loaded");
-
     }
 
     $('.scroll-prompt').on('click', function() {
@@ -536,6 +529,10 @@
         $(this).next().addClass("animated");
       });
     })
+
+    setTimeout(function() {
+      $("#loader").addClass("loaded");
+    }, 2500);
   </script>
 </body>
 
