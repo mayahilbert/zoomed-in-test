@@ -51,6 +51,9 @@
           </div>
           <div class="image" id="1" style="margin-top:1vh">
             <div class="v-image lazy" style="height: 75vh"></div>
+
+            <!-- <img class="v-image" style="height: 75vh" src="images/p1-2/1.jpg" id="first-image"></img> -->
+
             <a class="vid-v-arrow">&#8595;</a>
             <div class="tooltip-button" data-toggle="tooltip" data-html="true" data-placement="left" title="<p><em>Untitled</em> from <em>Like a Stone</em> series<br>
                 Digital C- Print 30x40” <br>
@@ -386,9 +389,10 @@
 
 
   <script>
-    setTimeout(function() {
-      $("#loader").addClass("loaded");
-    }, 2500);
+    // setTimeout(function() {
+    //   $("#loader").addClass("loaded");
+    // }, 2500);
+
 
     let locoScrollDefaults = {
       el: document.querySelector('[data-scroll-container]'),
@@ -410,6 +414,7 @@
     let locoScroll = new LocomotiveScroll(locoScrollDefaults);
 
     document.addEventListener("DOMContentLoaded", function() {
+
       var lazyloadImages;
 
       if ("IntersectionObserver" in window) {
@@ -471,8 +476,9 @@
       images.forEach((image, index) => {
         var currentImage = `./images/p1-2/${index+1}.jpg`
         image.style.backgroundImage = `url(./images/p1-2/${index+1}.jpg)`
-
       })
+      $("#loader").addClass("loaded");
+
     }
 
     $('.scroll-prompt').on('click', function() {
