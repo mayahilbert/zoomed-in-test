@@ -33,6 +33,26 @@
       border: 1px solid rgba(0, 0, 0, 0.7);
       padding: 3em 2em;
     }
+
+
+
+    @media only screen and (min-width: 600px) {
+      .portrait-diptych {
+        max-width: 50vw;
+      }
+    }
+
+    @media only screen and (min-width: 1000px) {
+      .portrait-diptych {
+        max-width: 40vw;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .portrait-diptych {
+        max-width: 30vw;
+      }
+    }
   </style>
 </head>
 
@@ -71,11 +91,7 @@
           </div>
 
           <div class="image p2-2" id="2">
-            <div class="diptych">
-
-              <div class="p2-image lazy"></div>
-              <div class="p2-image lazy"></div>
-            </div>
+            <div class="p2-image lazy"></div>
             <div class="img-arrow-container">
               <div class="img-arrow">&#8594;</div>
             </div>
@@ -124,66 +140,36 @@
           </div>
 
           <div class="image p2-5" id="9">
-            <div class="p2-image lazy"></div>
+            <div class="diptych" style="justify-content: center;">
+              <div class="p2-image lazy portrait-diptych"></div>
+              <div class="p2-image lazy portrait-diptych"></div>
+            </div>
             <div class="img-arrow-container">
               <div class="img-arrow">&#8594; </div>
             </div>
           </div>
 
           <div class="image p2-5" id="10">
-            <div class="p2-image lazy"></div>
+            <div class="diptych" style="justify-content: center;">
+              <div class="p2-image lazy portrait-diptych"></div>
+              <div class="p2-image lazy portrait-diptych"></div>
+            </div>
             <div class="img-arrow-container">
               <div class="img-arrow">&#8594; </div>
             </div>
           </div>
 
           <div class="image p2-5" id="11">
-            <div class="p2-image lazy"></div>
-            <div class="img-arrow-container">
-              <div class="img-arrow">&#8594; </div>
-            </div>
-          </div>
-
-          <div class="image p2-5" id="12">
-            <div class="p2-image lazy"></div>
-            <div class="img-arrow-container">
-              <div class="img-arrow">&#8594; </div>
-            </div>
-          </div>
-
-          <div class="image p2-5" id="13">
-            <div class="p2-image lazy"></div>
-            <div class="img-arrow-container">
-              <div class="img-arrow">&#8594; </div>
-            </div>
-          </div>
-
-          <div class="image p2-5" id="14">
-            <div class="p2-image lazy"></div>
-            <div class="img-arrow-container">
-              <div class="img-arrow">&#8594; </div>
-            </div>
-          </div>
-
-          <div class="image p2-5" id="15">
             <div class="diptych">
               <div class="p2-image lazy"></div>
               <div class="p2-image lazy"></div>
-              <div class="p2-image lazy"></div>
-              <div class="p2-image lazy"></div>
             </div>
             <div class="img-arrow-container">
-              <div class="img-arrow">&#8594; </div>
-            </div>
+              <a href="three.html" style="padding-bottom: 2em;"><em>Tuire Kayapó (First Contact)</em> &#8594;</a> </div>
           </div>
-
-          <div class="image p2-5" id="16">
-            <div class="p2-image lazy"></div>
-            <div class="img-arrow-container">
-              <a href="three.html"><em>Tuire Kayapó (First Contact)</em> &#8594;</a> </div>
-          </div>
-
     </div>
+
+  </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -291,7 +277,7 @@
           locoScroll.scrollTo(document.getElementById(nextImage));
         }, 350);
       }
-      if (nextImage == 17) {
+      if (nextImage == 12) {
         window.location.href = "three.html";
       }
     });
